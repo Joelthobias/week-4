@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Form from '../components/form';
 import Users from '../components/users';
 
 const Home = () => {
@@ -17,8 +18,8 @@ const Home = () => {
 	}, []);
 
 	return (
-		<div className="Home">
-			<table className="table">
+		<div className="Home row ">
+			<table className="table-responsive col-md-8 ">
 				<thead>
 					<tr>
 						<th scope="col">#</th>
@@ -34,6 +35,7 @@ const Home = () => {
 							<Users key={user._id} user={user} />)}
 				</tbody>
 			</table>
+			<Form/>
 		</div>
 	);
 };
